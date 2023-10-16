@@ -16,7 +16,6 @@ def get_scrapping_correios(tracker, data_at):
     
     return_status = soup.find('ul', class_="linha_status m-0")
     result_tracker = f"{message} {return_status.get_text()}"
-    print(result_tracker)
   except:
     result_tracker = "Falhou"
     pass
