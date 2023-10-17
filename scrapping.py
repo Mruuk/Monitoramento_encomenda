@@ -10,7 +10,6 @@ def get_scrapping_correios(tracker, data_at):
   try:
     message = f"Conforme solicitado, segue o status atual do seu objeto #{tracker}: \n"
     response = requests.get(f'{url_base}{tracker}')
-    print(f'{url_base}{tracker}')
     html_response = response.text
     soup = BeautifulSoup(html_response, 'html.parser')
     

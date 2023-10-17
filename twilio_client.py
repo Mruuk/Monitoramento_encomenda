@@ -7,7 +7,7 @@ def send_sms(number, text):
 
   message = client.messages.create(
                      body=text,
-                     from_="GENERATED_NUMBER",
+                     from_="NUMBER_TWILIO",
                      to=number
                  )
   return message.sid
